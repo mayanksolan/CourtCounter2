@@ -5,40 +5,87 @@
     android:layout_height="match_parent"
     tools:context="com.example.mayanksolan.courtcounter2.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textview"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="62dp"
-        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="132dp"
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:paddingTop="40dp">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="192dp"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/textview"
+                android:textSize="@dimen/count_text"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="253dp"
-        tools:ignore="MissingConstraints" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerLeftPanel"
+            android:layout_below="@id/topPanel">
 
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button1"
+                tools:ignore="MissingConstraints"/>
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button2"
+                android:layout_below="@id/button11"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button3"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@id/button12"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerRightPanel"
+            android:layout_below="@id/topPanel"
+            android:layout_toRightOf="@id/centerLeftPanel"
+            android:layout_toEndOf="@id/centerLeftPanel">
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button1"
+                tools:ignore="MissingConstraints"/>
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button2"
+                android:layout_below="@id/button21"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button3"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@id/button22"/>
+        </RelativeLayout>
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
